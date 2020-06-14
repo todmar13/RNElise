@@ -40,21 +40,24 @@ const Ascript = props => {
 
 
 return (
-  <View style={styles.container}>
-    <Circle color="#55ccbb"/>
-    <Text style={{ color: "#ccaaaa" }}>Screen Ascript in RNElise</Text>
-    {orientation === "LANDSCAPE" ? (
-      <Image
-        source={require("../assets/logohomeland.png")}
-        style={styles.logohomeland}
-      />
-    ) : (
-      <Image
-        source={require("../assets/logohomePort.png")}
-        style={styles.logohomeport}
-      />
-    )}
-  </View>
+<View style={styles.container}>
+  <Circle color="#a60000" orient={orientation} startSize={160} x={100} y={150} delay={500}/>
+  <Circle color="#a60000" orient={orientation} startSize={220} x={120} y={250} delay={1000}/>
+  <Circle color="#a60000" orient={orientation} startSize={220} x={160} y={300} delay={1500}/>
+  <Text style={{ color: "#ccaaaa" }}>Screen Ascript in RNElise</Text>
+  {orientation === "LANDSCAPE" ? (
+    <Image
+      source={require("../assets/logohomeland.png")}
+      style={styles.logohomeland}
+    />
+  ) : (
+    <Image
+      source={require("../assets/logohomePort.png")}
+      style={styles.logohomeport}
+    />
+  )}
+</View>
+
 );
 }
 
